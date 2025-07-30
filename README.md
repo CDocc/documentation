@@ -1,27 +1,28 @@
 # CDocc Development - FiveM Resources
 
-Welcome to the comprehensive do---
+Welcome to the comprehensive documentation for **CDocc Development** FiveM resources. This documentation covers all custom scripts, installation guides, and integration tools developed by our team.
 
-## 🔧 Resource Categories
+> 🤝 **TMC Framework Partnership** - While we are proudly partnered with TMC Framework, all resources documented here are independently developed by CDocc Development and are not affiliated with TMC Framework ownership.
 
 ### Available Scripts
 
 | Script Name | Category | Status | Compatibility |
 |-------------|----------|---------|---------------|
-| **Rocks In Socks Heist** | Heist | ✅ Available | TMC Framework |
-| **Vangelico Robbery** | Heist | ✅ Available | TMC Framework |
-| **Fleeca Robbery** | Heist | ✅ Available | TMC Framework |
-| **Paleto Robbery** | Heist | ✅ Available | TMC Framework |
-| **Postman Job** | Legal Job | ✅ Available | TMC Framework |
-| **Pizza Job** | Legal Job | ✅ Available | TMC Framework |
-| **Flubber Eats Delivery** | Legal Job | ✅ Available | TMC Framework |
-| **Oxy Runs** | Criminal | ✅ Available | TMC Framework |
-| **Coke Runs** | Criminal | ✅ Available | TMC Framework |
-| **Coke Planes** | Criminal | ✅ Available | TMC Framework |
-| **Nitrous Script** | Utility | ✅ Available | TMC Framework |
-| **Pets** | Utility | 🟡 Coming Soon | TMC Framework |**CDocc Development** FiveM resources. This documentation covers all custom scripts, installation guides, and integration tools developed by our team.
+| **Rocks In Socks Heist** | Heist | ✅ Available | TMC/QBCore/ESX |
+| **Vangelico Robbery** | Heist | ✅ Available | TMC/QBCore/ESX |
+| **Fleeca Robbery** | Heist | ✅ Available | TMC/QBCore/ESX |
+| **Paleto Robbery** | Heist | ✅ Available | TMC/QBCore/ESX |
+| **Postman Job** | Legal Job | ✅ Available | TMC/QBCore/ESX |
+| **Pizza Job** | Legal Job | ✅ Available | TMC/QBCore/ESX |
+| **Flubber Eats Delivery** | Legal Job | ✅ Available | TMC/QBCore/ESX |
+| **Oxy Runs** | Criminal | ✅ Available | TMC/QBCore/ESX |
+| **Coke Runs** | Criminal | ✅ Available | TMC/QBCore/ESX |
+| **Coke Planes** | Criminal | ✅ Available | TMC/QBCore/ESX |
+| **Nitrous Script** | Utility | ✅ Available | TMC/QBCore/ESX |
+| **TMC Tebex Commands** | Utility | ✅ Available | TMC Framework Only |
+| **Pets** | Utility | 🟡 Coming Soon | TMC/QBCore/ESX |
 
-> 🤝 **TMC Framework Partnership** - While we are proudly partnered with TMC Framework, all resources documented here are independently developed by CDocc Development and are not affiliated with TMC Framework ownership.
+---
 
 ## 🚀 Quick Navigation
 
@@ -82,12 +83,13 @@ Enhancement tools for improved gameplay:
 #### Nitrous Script
 Vehicle nitrous system with realistic mechanics.
 
+#### TMC Tebex Commands
+Server administration utility for TMC Framework Tebex integration and donation reward automation.
+
 #### Pets (Coming Soon)
 Companion animal system with care mechanics.
 
 [🛒 **Purchase Scripts →**](https://cdocc-development.tebex.io)
-
-**Example:** `_issue_t_boat ABC123 dinghy`
 
 ---
 
@@ -141,12 +143,12 @@ Companion animal system with care mechanics.
 
 ### Development Information
 
-- **Framework:** TMC Framework Compatible
+- **Framework:** TMC Framework / QBCore / ESX Compatible
 - **Language:** Lua (FiveM)
-- **Dependencies:** oxmysql, pma-voice
+- **Dependencies:** oxmysql, framework-specific resources
 - **Support:** Discord & Tebex Store
 - **Updates:** Regular feature updates
-- **Compatibility:** Tested with latest TMC builds
+- **Compatibility:** Tested with latest framework builds
 
 ---
 
@@ -155,8 +157,8 @@ Companion animal system with care mechanics.
 - � **[CDocc Development Store](https://cdocc-development.tebex.io)**
 - 💬 **[Discord Community](https://discord.gg/cdocc-development)**
 - � **[Full Documentation](https://docs.cdocc-development.com)**
-- 🤝 **[TMC Framework Partnership](https://tmcframework.com)**
-- 🐛 **[Bug Reports & Support](https://github.com/cdocc-development/issues)**
+- 🤝 **[TMC Framework](https://store.tmc.bj/package/fivem-base)**
+- 🐛 **[Bug Reports & Support](https://discord.gg/wy4JHqyArJ)**
 
 ---
 

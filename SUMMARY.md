@@ -31,6 +31,7 @@
 ## 🔧 Utility Scripts
 
 * [Nitrous Script](resources/utilities/nitrous.md)
+* [TMC Tebex Commands](resources/utilities/tmc-tebex-commands.md)
 * [Pets (Coming Soon)](resources/utilities/pets.md)
 
 ## 🛠️ Development
