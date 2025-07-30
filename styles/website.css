@@ -1,0 +1,234 @@
+/* Custom GitBook Styles for FiveM Documentation */
+
+/* Color Variables */
+:root {
+  --primary-color: #007acc;
+  --secondary-color: #00d4aa;
+  --accent-color: #ff6b6b;
+  --success-color: #51cf66;
+  --warning-color: #ffd43b;
+  --error-color: #ff6b6b;
+  --dark-bg: #1e1e1e;
+  --light-bg: #f8f9fa;
+  --border-color: #e1e5e9;
+}
+
+/* Enhanced Typography */
+.book .book-body .page-wrapper .page-inner {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Improved Headers */
+.book .book-body .page-wrapper .page-inner h1,
+.book .book-body .page-wrapper .page-inner h2,
+.book .book-body .page-wrapper .page-inner h3 {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Enhanced Code Blocks */
+.book .book-body .page-wrapper .page-inner pre {
+  background: var(--dark-bg);
+  border: none;
+  border-radius: 8px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book .book-body .page-wrapper .page-inner code {
+  background: #f1f3f4;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+  font-size: 0.9em;
+}
+
+/* Improved Tables */
+.book .book-body .page-wrapper .page-inner table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.book .book-body .page-wrapper .page-inner table th {
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.book .book-body .page-wrapper .page-inner table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.book .book-body .page-wrapper .page-inner table tr:nth-child(even) {
+  background: var(--light-bg);
+}
+
+.book .book-body .page-wrapper .page-inner table tr:hover {
+  background: #e3f2fd;
+}
+
+/* Enhanced Hint Blocks */
+.book .book-body .page-wrapper .page-inner .hint {
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book .book-body .page-wrapper .page-inner .hint.hint-info {
+  background: #e3f2fd;
+  border-left-color: #2196f3;
+  color: #0d47a1;
+}
+
+.book .book-body .page-wrapper .page-inner .hint.hint-success {
+  background: #e8f5e8;
+  border-left-color: var(--success-color);
+  color: #2e7d32;
+}
+
+.book .book-body .page-wrapper .page-inner .hint.hint-warning {
+  background: #fff8e1;
+  border-left-color: var(--warning-color);
+  color: #e65100;
+}
+
+.book .book-body .page-wrapper .page-inner .hint.hint-danger {
+  background: #ffebee;
+  border-left-color: var(--error-color);
+  color: #c62828;
+}
+
+/* Navigation Improvements */
+.book .book-summary {
+  background: #fafafa;
+  border-right: 1px solid var(--border-color);
+}
+
+.book .book-summary ul.summary li a {
+  color: #333;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin: 0.2rem 0;
+}
+
+.book .book-summary ul.summary li a:hover {
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+}
+
+.book .book-summary ul.summary li.active > a {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .book .book-body .page-wrapper .page-inner {
+    padding: 1rem;
+  }
+  
+  .book .book-body .page-wrapper .page-inner table {
+    font-size: 0.9rem;
+  }
+  
+  .book .book-body .page-wrapper .page-inner pre {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-active {
+  background: var(--success-color);
+  color: white;
+}
+
+.status-beta {
+  background: var(--warning-color);
+  color: #333;
+}
+
+.status-deprecated {
+  background: var(--error-color);
+  color: white;
+}
+
+/* Command Examples */
+.command-example {
+  background: #2d3748;
+  color: #68d391;
+  padding: 1rem;
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  margin: 1rem 0;
+}
+
+.command-example::before {
+  content: "$ ";
+  color: #63b3ed;
+}
+
+/* Feature Cards */
+.feature-card {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+/* Print Styles */
+@media print {
+  .book .book-summary {
+    display: none;
+  }
+  
+  .book .book-body {
+    left: 0;
+  }
+  
+  .book .book-body .page-wrapper .page-inner {
+    color: black;
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+}

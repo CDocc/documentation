@@ -1,0 +1,40 @@
+{
+  "name": "fivem-documentation",
+  "version": "1.0.0",
+  "description": "Comprehensive FiveM server documentation built with GitBook",
+  "main": "index.js",
+  "scripts": {
+    "install": "gitbook install",
+    "serve": "gitbook serve",
+    "build": "gitbook build",
+    "deploy": "gitbook build && gh-pages -d _book",
+    "dev": "gitbook serve --port 4000",
+    "clean": "rm -rf _book node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourserver/documentation.git"
+  },
+  "keywords": [
+    "fivem",
+    "documentation",
+    "gitbook",
+    "server",
+    "framework",
+    "tmc"
+  ],
+  "author": "Server Development Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourserver/documentation/issues"
+  },
+  "homepage": "https://docs.yourserver.com",
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2",
+    "gh-pages": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

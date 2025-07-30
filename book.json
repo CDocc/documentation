@@ -1,0 +1,41 @@
+{
+  "root": "./",
+  "structure": {
+    "readme": "README.md",
+    "summary": "SUMMARY.md"
+  },
+  "title": "CDocc Development - FiveM Resources",
+  "description": "Comprehensive documentation for CDocc Development FiveM scripts and resources",
+  "author": "CDocc Development Team",
+  "language": "en",
+  "direction": "ltr",
+  "gitbook": ">=3.0.0",
+  "plugins": [
+    "search",
+    "lunr",
+    "sharing",
+    "fontsettings",
+    "theme-default"
+  ],
+  "pluginsConfig": {
+    "sharing": {
+      "facebook": false,
+      "twitter": false,
+      "google": false,
+      "weibo": false,
+      "instapaper": false,
+      "vk": false,
+      "all": ["print"]
+    },
+    "fontsettings": {
+      "theme": "white",
+      "family": "sans",
+      "size": 2
+    }
+  },
+  "variables": {
+    "companyName": "CDocc Development",
+    "storeLink": "https://cdocc-development.tebex.io",
+    "discordLink": "https://discord.gg/wy4JHqyArJ"
+  }
+}
