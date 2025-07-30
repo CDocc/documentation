@@ -8,19 +8,19 @@ Welcome to the comprehensive documentation for **CDocc Development** FiveM resou
 
 | Script Name | Category | Status | Compatibility |
 |-------------|----------|---------|---------------|
-| **Rocks In Socks Heist** | Heist | ✅ Available | TMC/QBCore/ESX |
-| **Vangelico Robbery** | Heist | ✅ Available | TMC/QBCore/ESX |
-| **Fleeca Robbery** | Heist | ✅ Available | TMC/QBCore/ESX |
-| **Paleto Robbery** | Heist | ✅ Available | TMC/QBCore/ESX |
-| **Postman Job** | Legal Job | ✅ Available | TMC/QBCore/ESX |
-| **Pizza Job** | Legal Job | ✅ Available | TMC/QBCore/ESX |
+| **Rocks In Socks Heist** | Heist | ✅ Available | TMC/QBox |
+| **Vangelico Robbery** | Heist | ✅ Available | TMC |
+| **Fleeca Robbery** | Heist | ✅ Available | TMC |
+| **Paleto Robbery** | Heist | ✅ Available | TMC |
+| **Postman Job** | Legal Job | ✅ Available | TMCX |
+| **Pizza Job** | Legal Job | ✅ Available | TMC |
 | **Flubber Eats Delivery** | Legal Job | ✅ Available | TMC/QBCore/ESX |
-| **Oxy Runs** | Criminal | ✅ Available | TMC/QBCore/ESX |
-| **Coke Runs** | Criminal | ✅ Available | TMC/QBCore/ESX |
-| **Coke Planes** | Criminal | ✅ Available | TMC/QBCore/ESX |
-| **Nitrous Script** | Utility | ✅ Available | TMC/QBCore/ESX |
+| **Oxy Runs** | Criminal | ✅ Available | TMC |
+| **Coke Runs** | Criminal | ✅ Available | TMC |
+| **Coke Planes** | Criminal | ✅ Available | TMC |
+| **Nitrous Script** | Utility | ✅ Available | TMC |
 | **TMC Tebex Commands** | Utility | ✅ Available | TMC Framework Only |
-| **Pets** | Utility | 🟡 Coming Soon | TMC/QBCore/ESX |
+| **Pets** | Utility | 🟡 Coming Soon | TMC |
 
 ---
 
