@@ -114,7 +114,7 @@ To use these commands with Tebex, set up custom variables in your Tebex package:
    ```
    Variable Name: citizenid
    Display Name: Citizen ID
-   Description: Enter your in-game Citizen ID (found in F1 menu)
+   Description: Enter your in-game Citizen ID
    Required: Yes
    Type: Text Input
    ```
