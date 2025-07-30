@@ -5,7 +5,56 @@
 The TMC Framework Tebex Command Integration provides custom server commands specifically designed for TMC Framework servers to issue donation rewards through Tebex. These commands allow server administrators to automatically deliver items, vehicles, helicopters, and boats directly to players using their Citizen ID.
 
 {% hint style="info" %}
-This utility is specifically designed for TMC Framework and provides integration between Tebex donation systems and TMC player databases.
+This utility features a centralized configuration system that makes customization easy and maintains consistency across all commands.
+{% endhint %}
+
+## ⚙️ Configuration System
+
+The script includes a comprehensive `Config` table at the top of `server.lua` that centralizes all settings:
+
+### Garage Locations
+```lua
+Config.GarageLocations = {
+    cars = 'legionsquare',      -- Default car storage garage
+    helicopters = 'lsiagen',    -- Default helicopter storage garage
+    boats = 'helitours'         -- Default boat storage garage
+}
+```
+
+### Vehicle Types
+```lua
+Config.VehicleTypes = {
+    car = 'vehicle',
+    helicopter = 'aircraft',
+    boat = 'boat'
+}
+```
+
+### Notification Messages
+```lua
+Config.Notifications = {
+    item = 'You received %s x %s as donation rewards',
+    vehicle = 'You received a vehicle as a donation reward',
+    helicopter = 'You received a helicopter as a donation reward',
+    boat = 'You received a boat as a donation reward'
+}
+```
+
+### Logging Configuration
+```lua
+Config.Logging = {
+    source = 'tebex-commands',
+    colors = {
+        success = 'green',
+        error = 'red',
+        info = 'blue'
+    },
+    forceDiscord = true
+}
+```
+
+{% hint style="success" %}
+**Easy Customization**: All settings are centralized in the Config table. Simply modify these values to customize garage locations, notification messages, and logging preferences without editing the command code.
 {% endhint %}
 
 ---
@@ -29,7 +78,9 @@ _t_item ABC123 phone 1
 **Features:**
 - ✅ Works for both online and offline players
 - 🔒 Server-side only command
-- 📝 Automatically logged via `tmc:log`
+- 📝 Logged using `Config.Logging` settings
+- 💬 Notification message from `Config.Notifications.item`
+- 🎯 Smart inventory management for offline players
 
 ---
 
@@ -49,9 +100,11 @@ _issue_t_car ABC123 sultan
 ```
 
 **Details:**
-- 🚗 Stores the car in the `legionsquare` garage
+- 🚗 Stores the car in the garage specified by `Config.GarageLocations.cars` (default: `legionsquare`)
 - 🔒 Server-side only command
-- 📝 Logged for audit purposes
+- 📝 Logged using `Config.Logging` settings
+- 🔧 Vehicle type set via `Config.VehicleTypes.car`
+- 💬 Notification message from `Config.Notifications.vehicle`
 
 ---
 
@@ -69,9 +122,11 @@ _issue_t_heli ABC123 buzzard
 ```
 
 **Details:**
-- 🚁 Stored in the `lsiagen` garage
+- 🚁 Stored in the garage specified by `Config.GarageLocations.helicopters` (default: `lsiagen`)
 - 🔒 Server-side only command
-- 📝 Comprehensive logging included
+- 📝 Logged using `Config.Logging` settings
+- 🔧 Vehicle type set via `Config.VehicleTypes.helicopter`
+- 💬 Notification message from `Config.Notifications.helicopter`
 
 ---
 
@@ -89,9 +144,11 @@ _issue_t_boat ABC123 dinghy
 ```
 
 **Details:**
-- 🚤 Stored in the `helitours` garage
+- 🚤 Stored in the garage specified by `Config.GarageLocations.boats` (default: `helitours`)
 - 🔒 Server-side only command
-- 📝 Full audit trail maintained
+- 📝 Logged using `Config.Logging` settings
+- 🔧 Vehicle type set via `Config.VehicleTypes.boat`
+- 💬 Notification message from `Config.Notifications.boat`
 
 ---
 
@@ -171,51 +228,96 @@ _issue_t_heli {citizenid} swift
 ### Installation Steps
 
 1. **Download the Script**
-   - Obtain the TMC Tebex Commands script
-   - Extract to your resources folder
+   - Obtain the TMC Tebex Commands script from CDocc Development
+   - Extract to your resources folder: `resources/[utilities]/tmc-tebex-commands/`
 
-2. **Server Configuration**
+2. **Configure the Script**
+   - Open `server.lua` and review the `Config` table at the top
+   - Modify garage locations to match your server's garage system
+   - Customize notification messages as desired
+   - Adjust logging settings for your needs
+
+3. **Server Configuration**
    - Add to your `server.cfg`:
    ```
    ensure tmc-tebex-commands
    ```
 
-3. **Database Setup**
+4. **Database Setup**
    - No additional database tables required
    - Uses existing TMC Framework player and vehicle tables
+   - Ensure your TMC Framework is up to date
 
-4. **Verification**
+5. **Verification**
    - Restart your server
    - Test commands in server console
-   - Verify logging functionality
+   - Verify logging functionality via `tmc:log`
+   - Confirm garage locations match your server setup
 
 ---
 
 ## 🔧 Advanced Configuration
 
-### Custom Garage Locations
+### Customizing Garage Locations
 
-You can modify garage storage locations by editing the script configuration:
+Modify the garage locations where vehicles are stored by editing the `Config.GarageLocations` table:
 
 ```lua
 Config.GarageLocations = {
-    cars = 'legionsquare',      -- Default car storage
-    helicopters = 'lsiagen',    -- Default helicopter storage
-    boats = 'helitours'         -- Default boat storage
+    cars = 'legionsquare',      -- Change to any valid garage name
+    helicopters = 'lsiagen',    -- Change to any valid helicopter garage
+    boats = 'helitours'         -- Change to any valid marina/boat garage
 }
 ```
 
-### Logging Configuration
+### Vehicle Type Configuration
 
-Configure logging settings for audit purposes:
+Customize how vehicles are categorized in the database:
+
+```lua
+Config.VehicleTypes = {
+    car = 'vehicle',      -- Database vehicle type for cars
+    helicopter = 'aircraft',  -- Database vehicle type for helicopters
+    boat = 'boat'         -- Database vehicle type for boats
+}
+```
+
+### Notification Customization
+
+Personalize the messages players receive when getting donation rewards:
+
+```lua
+Config.Notifications = {
+    item = 'You received %s x %s as donation rewards',
+    vehicle = 'You received a vehicle as a donation reward',
+    helicopter = 'You received a helicopter as a donation reward',
+    boat = 'You received a boat as a donation reward'
+}
+```
+
+### Logging Settings
+
+Configure how actions are logged:
 
 ```lua
 Config.Logging = {
-    enabled = true,
-    discord_webhook = 'your_webhook_url',
-    log_to_file = true,
-    log_level = 'info'
+    source = 'tebex-commands',    -- Log source identifier
+    colors = {
+        success = 'green',        -- Success log color
+        error = 'red',           -- Error log color
+        info = 'blue'            -- Info log color
+    },
+    forceDiscord = true          -- Force Discord webhook logging
 }
+```
+
+### Debug Options
+
+Enable debug mode for troubleshooting:
+
+```lua
+Config.Debug = true              -- Enable detailed console logging
+Config.EnableLogging = true      -- Enable/disable all logging
 ```
 
 ---
@@ -265,13 +367,38 @@ Config.Logging = {
 #### Vehicle Not in Garage
 **Possible Causes:**
 - Vehicle model name incorrect
-- Garage system not functioning
+- Garage location not configured properly
 - Database write failure
+- Wrong `Config.GarageLocations` setting
 
 **Solutions:**
-1. Verify vehicle spawn names
-2. Check TMC garage system
-3. Review database logs
+1. Verify vehicle spawn names match your server
+2. Check `Config.GarageLocations` settings match your garage system
+3. Ensure garage names exist in your TMC Framework setup
+4. Review database logs
+
+### Configuration Issues
+
+#### Wrong Garage Assignment
+**Problem:** Vehicles appear in wrong garages
+**Solution:** Check and update `Config.GarageLocations`:
+```lua
+Config.GarageLocations = {
+    cars = 'your_car_garage_name',
+    helicopters = 'your_heli_garage_name', 
+    boats = 'your_boat_garage_name'
+}
+```
+
+#### Notification Messages Not Showing
+**Problem:** Players not receiving reward notifications
+**Solution:** Verify `Config.Notifications` are properly configured:
+```lua
+Config.Notifications = {
+    vehicle = 'Your custom vehicle message',
+    -- etc...
+}
+```
 
 ### Debug Mode
 
